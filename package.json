@@ -1,0 +1,19 @@
+{
+  "name": "normalized-contains",
+  "version": "1.0.0",
+  "description": "Checks whether a noramlized version of a string contains another string",
+  "main": "lib/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "localeCompare",
+    "contains",
+    "includes",
+    "Unicode",
+    "Normalization",
+    "Form"
+  ],
+  "author": "everdimension <everdimension@gmail.com>",
+  "license": "MIT"
+}
