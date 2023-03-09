@@ -1,9 +1,21 @@
 {
   "name": "normalized-contains",
   "version": "1.0.0",
-  "description": "Checks whether a noramlized version of a string contains another string",
-  "main": "lib/index.js",
+  "description": "Checks whether a normalized version of a string contains another string",
+  "main": "lib/normalizedContains.cjs",
+  "type": "module",
+  "source": "src/index.ts",
+  "exports": {
+    "require": "./lib/normalizedContains.cjs",
+    "default": "./lib/normalizedContains.modern.js"
+  },
+  "module": "./lib/normalizedContains.module.js",
+  "unpkg": "./lib/normalizedContains.umd.js",
+  "typings": "lib/index.d.ts",
   "scripts": {
+    "build": "microbundle",
+    "prepare": "npm run build",
+    "pretest": "tsc --noEmit",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [
@@ -11,9 +23,12 @@
     "contains",
     "includes",
     "Unicode",
-    "Normalization",
-    "Form"
+    "Normalization"
   ],
   "author": "everdimension <everdimension@gmail.com>",
-  "license": "MIT"
+  "license": "MIT",
+  "devDependencies": {
+    "microbundle": "^0.15.1",
+    "typescript": "^4.9.5"
+  }
 }
